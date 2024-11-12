@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Assesment</title>
+</head>
+
+<body>
+    <nav class=" main_sect navbar navbar-expand-lg navbar-light bg-white   ">
+        <div class="logo">
+            <img src="./assest/TestLogo.png" alt="TechCare Logo" class="">
+        </div>
+        <div class="nav_list">
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item bg_green ">
+                    <a href="#" class="nav-link ">
+                        <i class="fa-solid fa-house"></i>
+                        <span> Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item bg-white ">
+                    <a href="#" class="nav-link ">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span> Patients</span>
+                    </a>
+                </li>
+                <li class="nav-item bg-white">
+                    <a href="#" class="nav-link ">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span> Schedule</span>
+                    </a>
+                </li>
+                <li class="nav-item bg-white">
+                    <a href="#" class="nav-link ">
+                        <i class="fa-regular fa-message"></i>
+                        <span> Message</span>
+                    </a>
+                </li>
+                <li class="nav-item bg-white">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span> Transactions</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class=" nav_profile d-flex align-items-center">
+            <div class="profli_img_name">
+                <div class="profile_img  ">
+                    <img src="" alt="Profile Picture" class="pt_Img" id="profile-picture">
+                </div>
+                <div class="name">
+                    <span class="d-block fw-bold text-dark pt_name " id="profile_name"></span>
+                    <span class="d-block text-muted">General Practitioner</span>
+                </div>
+            </div>
+
+            <div class="settingbtn">
+                <div class="dropdown">
+                    <button class="btn boder-0 bg-transparent " type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn boder-0 bg-transparent " type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i> </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- </div> -->
+
+    </nav>
+    <section class="main_sect">
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3 sidebar_col">
+                    <div class="p_sidebar bg-white ">
+                        <div class="s_header">
+                            <h2 class="">Patients</h2>
+                            <button class="btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+
+                        <ul class="list-unstyled">
+                            <li class="patient-tab mb-2 p-2 activeli  rounded cursor-pointer"
+                                onclick="showPatientData('patient1')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="" alt="jessica" class="pt_Img">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4 class="pt_name"></h4>
+                                            </div>
+                                            <div class="gender pt_gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient2')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4 class="pt_name"></h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span class="pt_gender"></span><span class="">, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient3')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="" alt="jessica" class="pt_Img">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4 class="pt_name"></h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span class="pt_gender"></span><span>, </span><span
+                                                    class="pt_age"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="" alt="jessica" class="pt_Img">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4 class="pt_name"></h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span class="pt_gender"></span><span>,</span> <span
+                                                    class="pt_age"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li class="patient-tab mb-2 p-2  cursor-pointer" onclick="showPatientData('patient4')">
+                                <div class="patient_nav">
+                                    <div class="p_info">
+                                        <div class="p_Img">
+                                            <img src="./assest/jessica.png" alt="jessica">
+                                        </div>
+                                        <div class="p_name">
+                                            <div class="name">
+                                                <h4>Jessika Tylor</h4>
+                                            </div>
+                                            <div class="gender">
+                                                <span>Female</span><span>, 28</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a>
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- Main Content -->
+                <div class="col-md-9  ">
+
+                    <div class=" patient-data active" id="patient1">
+                        <div class="row   ">
+                            <div class="col-md-8 reading_col ">
+                                <div class="readingArea bg-white ">
+                                    <h2>Diagnostic History</h2>
+                                    <div class="row  ">
+                                        <div class="col-md-12 reading_col  ">
+                                            <div class="chart-container">
+
+                                                <div class="row p-0 ">
+                                                    <div class="col-md-9 p-0">
+                                                        <div class="chart-header">
+                                                            <h4>
+                                                                Blood Pressure
+                                                            </h4>
+                                                            <div class="dropdown">
+                                                                <button class=" dropdown-toggle" type="button"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    Last 6 Months
+                                                                </button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a class="dropdown-item" href="#">Action</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item" href="#">Another
+                                                                            action</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Something else
+                                                                            here</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <canvas id="bloodPressureChart"></canvas>
+                                                    </div>
+                                                    <div class="col-md-3 p-0">
+                                                        <div class="chart-legend">
+                                                            <div class="legend1">
+                                                                <div class="legendHeading_wrapper">
+                                                                    <span
+                                                                        style="color: #E66FD2; font-size: 14px;   ">●</span>
+                                                                    <span class="legendHeading">Systolic</span>
+                                                                </div>
+                                                                <h3 class="pt_systolicData"></h3>
+                                                                <span><i class="fa-solid fa-caret-up"></i> <span
+                                                                        class="pt_systolicLevels"> </span></span>
+                                                            </div>
+
+
+                                                            <div class="horzontal_line"></div>
+                                                            <div class="legend2">
+                                                                <div class="legendHeading_wrapper">
+                                                                    <span
+                                                                        style="color: #8C6FE6EB; font-size: 14px;   ">●</span>
+                                                                    <span class="legendHeading">Diastolic</span>
+                                                                </div>
+                                                                <h3 class="pt_diastolicData"></h3>
+                                                                <span class="pt_diastolicLevels"> </span>
+                                                            </div>
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <div class="readingCard respiratoryCard ">
+                                                <div class="img_wrapper">
+                                                    <img src="./assest/respiratoryrate.png" alt="respiratoryrate">
+
+                                                </div>
+                                                <div class="data">
+
+                                                    <span>Respiratory Rate</span>
+                                                    <h1 class="pt_SinglerespiratoryRate">20 bpm</h1>
+                                                    <span class="pt_Singlerespiratorylevels"></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <div class="readingCard tepratureCard ">
+                                                <div class="img_wrapper">
+                                                    <img src="./assest/temperature.png" alt="temperature">
+
+                                                </div>
+                                                <div class="data">
+
+                                                    <span>Temperature</span>
+                                                    <h1 class="pt_Singletemperature"></h1>
+                                                    <span class="pt_Singletemperaturelevels"></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <div class="readingCard heartBpCard ">
+                                                <div class="img_wrapper">
+                                                    <img src="./assest/HeartBPM.png" alt="HeartBPM">
+
+                                                </div>
+                                                <div class="data">
+
+                                                    <span>Heart Rate</span>
+                                                    <h1 class="pt_SingleheartRate"></h1>
+                                                    <span class="pt_SingleheartLevels"> </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" tableArea bg-white">
+                                    <h2>Diagnostic List</h2>
+                                    <table class="table">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col">Problem/Diagnosis</th>
+                                                <th scope="col">Description </th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="pt_diseaseNamesTableBody">
+                                            <tr>
+                                                <td class="pt_diseaseNames"></td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thornton</td>
+                                                <td>Thornton</td>
+
+                                                <td>@twitter</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thornton</td>
+                                                <td>Thornton</td>
+
+                                                <td>@twitter</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thornton</td>
+                                                <td>Thornton</td>
+
+                                                <td>@twitter</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thornton</td>
+                                                <td>Thornton</td>
+
+                                                <td>@twitter</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thornton</td>
+                                                <td>Thornton</td>
+
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 profile_col">
+                                <div class="side-section profile_sect bg-white ">
+                                    <div class="profile_img_name">
+                                        <div class="patient-photo">
+                                            <img class="pt_Img" src="" alt="Patient Photo">
+                                        </div>
+                                        <h2 class="patient-name pt_name "></h2>
+
+                                    </div>
+
+
+                                    <div class="patient-info">
+                                        <div class="info-item">
+                                            <div class="infoIcon">
+                                                <i class="fa-regular fa-calendar"></i>
+
+                                            </div>
+                                            <div class="infoDetail">
+                                                <span class="info-title">Date of Birth</span>
+                                                <span class="info-title pt_DOB "></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Gender Section -->
+
+                                        <div class="info-item">
+                                            <div class="infoIcon">
+                                                <i class="fa-solid fa-venus"></i>
+                                            </div>
+                                            <div class="infoDetail">
+                                                <span class="info-title  ">Gender</span>
+                                                <span class="info-title pt_gender "></span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="info-item">
+                                            <div class="infoIcon">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
+                                            <div class="infoDetail">
+                                                <span class="info-title">Contact Info</span>
+                                                <span class="info-title pt_phone "></span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                        <div class="info-item">
+                                            <div class="infoIcon">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
+                                            <div class="infoDetail">
+                                                <span class="info-title">Emergency Contact</span>
+                                                <span class="info-title pt_emergency_phone "></span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                        <div class="info-item">
+                                            <div class="infoIcon">
+                                                <i class="fa-solid fa-shield-heart"></i>
+                                            </div>
+                                            <div class="infoDetail">
+                                                <span class="info-title">Insurance Provider</span>
+                                                <span class="info-title pt_insurrance "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn ">Show All Information</button>
+
+                                </div>
+
+                                <div class=" tableArea bg-white lab_list ">
+                                    <h2>Lab Results</h2>
+                                    <ul>
+                                        <li class="greyLi">
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="li_info">
+                                                <span>Blood Test</span>
+                                                <Button>
+                                                    <i class="fa-solid fa-download"></i>
+                                                </Button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="p-3 patient-data " id="patient2">
+                    <div class="row">
+                        <div class="col-md-8 bg-white ">
+                            <h2>Emily </h2>
+                            <p>Age: 18</p>
+                            <p>Diagnosis: Hypertension</p>
+                            <p>Last Checkup: 2024-11-01</p>
+                        </div>
+                        <div class="col-md-4 bg-white ">
+                            <h2>Emily 355</h2>s
+                            <p>Age: 18</p>
+                            <p>Diagnosis: Hypertension</p>
+                            <p>Last Checkup: 2024-11-01</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="p-3 patient-data " id="patient3">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2>Emily Williams</h2>
+                            <p>Age: 18</p>
+                            <p>Diagnosis: Hypertension</p>
+                            <p>Last Checkup: 2024-11-01</p>
+                        </div>
+
+                        <div class="col-md-4 ">
+                            <div class="side-section">
+                                <!-- Circular Image -->
+                                <div class="patient-photo">
+                                    <img src="./assest/patient_1.png" alt="Patient Photo">
+                                </div>
+
+                                <!-- Patient Name -->
+                                <h2 class="patient-name">John Doe</h2>
+
+                                <!-- Date of Birth Section -->
+                                <div class="patient-info">
+                                    <div class="info-item">
+                                        <i class="icon">📅</i>
+                                        <div>
+                                            <span class="info-title">Date of Birth</span>
+                                            <p class="info-detail">01/01/1980</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Gender Section -->
+                                    <div class="info-item">
+                                        <i class="icon">⚥</i>
+                                        <div>
+                                            <span class="info-title">Gender</span>
+                                            <p class="info-detail">Male</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js" ></script>
+   
+
+
+
+
+</body>
+
+</html>
